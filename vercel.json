@@ -6,16 +6,6 @@
       "use": "@vercel/node"
     }
   ],
-  "routes": [
-    {
-      "src": "/api/feedback/general",
-      "dest": "/api/feedback/general"
-    },
-     {
-      "src": "/api/v1/auth/register",  // Adjust this line for your register route
-      "dest": "/api/v1/auth/register"   // Points to your register handler
-    },
-  ],
   "functions": {
     "api/index.js": {
       "timeout": 30  // Set the timeout for your index.js function
