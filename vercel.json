@@ -8,13 +8,21 @@
   ],
   "routes": [
     {
-      "src": "/api/feedback/(.*)",
+      "src": "/api/feedback/general",
+      "dest": "/api/feedback/general"
+    },
+    {
+      "src": "/api/feedback/other",  // Add this line for another endpoint, if you have it
+      "dest": "/api/feedback/other"   // Adjust the destination as necessary
+    },
+    {
+      "src": "/api/feedback/(.*)",   // Catch-all for other feedback routes
       "dest": "/api/feedback/general"
     }
   ],
   "functions": {
     "api/index.js": {
-      "timeout": 30 
+      "timeout": 30  // Set the timeout for your index.js function
     }
   }
 }
